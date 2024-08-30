@@ -1,15 +1,30 @@
 import "./style/App.css";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Link, Navigate } from "react-router-dom";
 import Home from "../pages/Home";
 import About from "../pages/About";
+import Dashboard from "../pages/Dashboard";
 import NotFound from "../pages/NotFound";
+
 import {
   SignedIn,
+  SignIn,
   SignedOut,
   SignInButton,
   UserButton,
+  SignOutButton,
+  useUser,
 } from "@clerk/clerk-react";
 
+const ProtectedRoute = ({ element }) => {
+  return (
+    <>
+      <SignedIn>{element}</SignedIn>
+      <SignedOut>
+        <Navigate to="/sign-in" />
+      </SignedOut>
+    </>
+  );
+};
 function App() {
   return (
     <>
@@ -22,10 +37,14 @@ function App() {
         </SignedIn>
       </header>
 
-      {/* Routes */}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/about" element={<ProtectedRoute element={<About />} />} />
+        <Route
+          path="/dashboard"
+          element={<ProtectedRoute element={<Dashboard />} />}
+        />
+        <Route path="/sign-in" element={<SignIn />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>
