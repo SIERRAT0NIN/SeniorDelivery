@@ -19,7 +19,6 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       <NextUIProvider>
         <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
           <NavBar />
-
           <App />
         </ClerkProvider>
       </NextUIProvider>
