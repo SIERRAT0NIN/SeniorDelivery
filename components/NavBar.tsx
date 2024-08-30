@@ -11,7 +11,7 @@ import ClerkAvi from "./ClerkAvi";
 
 export default function App() {
   return (
-    <Navbar>
+    <Navbar shouldHideOnScroll>
       <NavbarBrand>
         <p className="font-bold text-inherit">Senior Delivery</p>
       </NavbarBrand>
