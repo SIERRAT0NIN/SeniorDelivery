@@ -3,6 +3,7 @@ import { Routes, Route, Link, Navigate } from "react-router-dom";
 import Home from "../pages/Home";
 import About from "../pages/About";
 import Dashboard from "../pages/Dashboard";
+import Explore from "../pages/Explore";
 import NotFound from "../pages/NotFound";
 
 import {
@@ -43,6 +44,10 @@ function App() {
         <Route
           path="/dashboard"
           element={<ProtectedRoute element={<Dashboard />} />}
+        />
+        <Route
+          path="/explore"
+          element={<ProtectedRoute element={<Explore />} />}
         />
         <Route path="/sign-in" element={<SignIn />} />
         <Route path="*" element={<NotFound />} />
