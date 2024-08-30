@@ -1,30 +1,14 @@
 from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
-# In app.py
-from flask_migrate import Migrate
-from models import User
-
-# After initializing SQLAlchemy (db)
+from flask_restful import Resource, Api
 
 app = Flask(__name__)
+api = Api(app)
 
-# Configurations
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///your_database.db'  # Example with SQLite
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+class HelloWorld(Resource):
+    def get(self):
+        return {'hello': 'world'}
 
-# Initialize the database
-db = SQLAlchemy(app)
-# In app.py
-
-
-
-# After initializing SQLAlchemy (db)
-migrate = Migrate(app, db)
-
-# Simple route to test the setup
-@app.route('/')
-def home():
-    return "Hello, Flask!"
+api.add_resource(HelloWorld, '/')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=5555)
