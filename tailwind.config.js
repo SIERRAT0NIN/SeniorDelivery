@@ -8,8 +8,16 @@ export default {
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: "#FF8343",
+        secondary: "#F1DEC6",
+        accent: "#179BAE",
+        neutral: "#4158A6",
+      },
+    },
   },
+
   darkMode: "class",
-  plugins: [nextui()]
+  plugins: [nextui()],
 };
