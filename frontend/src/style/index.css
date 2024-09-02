@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.lobster-regular {
+  font-family: "Lobster", sans-serif;
+  font-style: normal;
+}

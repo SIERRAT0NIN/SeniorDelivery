@@ -16,6 +16,12 @@ export default {
         neutral: "#4158A6",
       },
     },
+    fontFamily: {
+      Lobster: ["Lobster"],
+      PlayfairDisplay: ["Playfair Display"],
+      sans: ["Roboto", "sans-serif"], // Add your Google font here
+      custom: ["CustomFont", "sans-serif"], // Add your local custom font here
+    },
   },
 
   darkMode: "class",

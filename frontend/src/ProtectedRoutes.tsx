@@ -1,4 +1,4 @@
-import { Routes, Route, Link, Navigate } from "react-router-dom";
+import { Route, Navigate } from "react-router-dom";
 import { useUser } from "@clerk/clerk-react";
 
 const ProtectedRoute = ({ element: Component, ...rest }) => {

@@ -1,11 +1,16 @@
-import React from "react";
-import DisplayCard from "../components/DisplayCard";
+import { Image } from "@nextui-org/react";
+
 const Home = () => {
   return (
     <div className="text-center text-3xl font-bold text-black bg-secondary w-screen h-screen flex-1">
-      <h1>Welcome to my website</h1>
-      <section className="flex justify-center">
-        <DisplayCard />
+      <section className="flex-1 justify-center">
+        <div>
+          <h1>Welcome to Senior Delivery! </h1>
+          <h2>
+            Our solution to food deserts affecting our elderly population.
+          </h2>
+        </div>
+        <Image src="https://www.eatright.org/-/media/images/eatright-landing-pages/foodgroupslp_804x482.jpg?as=0&w=967&rev=d0d1ce321d944bbe82024fff81c938e7&hash=E6474C8EFC5BE5F0DA9C32D4A797D10D" />
       </section>
     </div>
   );
