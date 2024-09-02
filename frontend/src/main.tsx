@@ -20,10 +20,12 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <BrowserRouter>
       <NextUIProvider>
         <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
-          <NavBar />
-          <ScrollShadow hideScrollBar className=" w-auto h-auto">
-            <App />
-          </ScrollShadow>
+          <div className=" gradient-bg">
+            <NavBar />
+            <ScrollShadow hideScrollBar className=" w-auto h-auto">
+              <App />
+            </ScrollShadow>
+          </div>
         </ClerkProvider>
       </NextUIProvider>
     </BrowserRouter>

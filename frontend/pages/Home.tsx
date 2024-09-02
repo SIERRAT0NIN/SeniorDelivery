@@ -2,8 +2,8 @@ import { Image } from "@nextui-org/react";
 
 const Home = () => {
   return (
-    <div className="text-center text-3xl font-bold text-black bg-secondary w-screen h-screen flex-1">
-      <section className="flex-1 justify-center bg-secondary">
+    <div className="text-center text-3xl font-bold text-black w-screen h-screen flex-1">
+      <section className="flex-1 justify-center ">
         <h1 className="">Welcome to Senior Delivery!</h1>
         <h2>Our solution to food deserts affecting our elderly population.</h2>
 
