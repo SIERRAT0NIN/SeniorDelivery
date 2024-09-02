@@ -2,7 +2,8 @@ import React from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 
-const stripePromise = loadStripe("your_publishable_key_here"); // Replace with your Stripe publishable key
+const STRIPE_PUBLISHABLE_KEY = import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY;
+const stripePromise = loadStripe(STRIPE_PUBLISHABLE_KEY); // Replace with your Stripe publishable key
 
 const CheckoutButton = () => {
   const handleClick = async () => {

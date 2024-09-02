@@ -42,18 +42,18 @@ const Home = () => {
     <>
       <div className="text-center text-3xl font-bold text-black  flex-1">
         <section className="flex-1 justify-center h-screen ">
-          <h1 className="size-lg">
+          <h1 className="">
             Welcome to
-            <span className=" lobster-regular size-lg">Senior Delivery</span>!
+            <span className="lobster-regular">Senior Delivery</span>!
           </h1>
           <h2>
             Our solution to food deserts affecting our elderly population.
           </h2>
           <div className="flex-1 justify-center">
             <Button color="primary" onPress={onOpen}>
-              Get Started!
+              Learn More!
             </Button>
-            <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+            <Modal isOpen={isOpen} onOpenChange={onOpenChange} className="p-10">
               <ModalContent>
                 {(onClose) => (
                   <>
@@ -62,25 +62,25 @@ const Home = () => {
                     </ModalHeader>
                     <ModalBody>
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Nullam pulvinar risus non risus hendrerit venenatis.
-                        Pellentesque sit amet hendrerit risus, sed porttitor
-                        quam.
-                      </p>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Nullam pulvinar risus non risus hendrerit venenatis.
-                        Pellentesque sit amet hendrerit risus, sed porttitor
-                        quam.
-                      </p>
-                      <p>
-                        Magna exercitation reprehenderit magna aute tempor
-                        cupidatat consequat elit dolor adipisicing. Mollit dolor
-                        eiusmod sunt ex incididunt cillum quis. Velit duis sit
-                        officia eiusmod Lorem aliqua enim laboris do dolor
-                        eiusmod. Et mollit incididunt nisi consectetur esse
-                        laborum eiusmod pariatur proident Lorem eiusmod et.
-                        Culpa deserunt nostrud ad veniam.
+                        Food deserts are areas, often in low-income
+                        neighborhoods, where access to affordable and nutritious
+                        food is limited. Grocery stores and supermarkets are
+                        either scarce or too far away, making it difficult for
+                        residents to purchase fresh fruits, vegetables, and
+                        other healthy foods. Instead, they may rely on
+                        convenience stores and fast-food outlets, which
+                        typically offer less nutritious options. Elderly food
+                        insecurity is a significant issue within these areas.
+                        Many older adults face challenges like limited mobility,
+                        fixed incomes, and health issues, making it even harder
+                        for them to access and afford healthy food. This lack of
+                        access can lead to poor nutrition, which further impacts
+                        their overall health and quality of life. Addressing
+                        food deserts and elderly food insecurity requires
+                        community-focused solutions, like improving
+                        transportation, increasing the availability of healthy
+                        food options, and providing financial assistance to
+                        those in need.
                       </p>
                     </ModalBody>
                     <ModalFooter>
@@ -102,7 +102,7 @@ const Home = () => {
           </div>
           <div className="">
             <Intro />
-            <Menu />
+            {/* <Menu /> */}
           </div>
           <div className="flex justify-center">
             <CarouselHero images={images} />

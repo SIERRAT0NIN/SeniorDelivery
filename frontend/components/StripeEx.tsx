@@ -3,18 +3,23 @@ import React, { useState, useEffect } from "react";
 
 const ProductDisplay = () => (
   <section>
-    <div className="gradient-card1 rounded-lg text-white">
-      <Image
+    <div className="gradient-card1 rounded-lg mt-10 text-white justify-center w-full flex">
+      {/* <Image
         width={200}
         src="https://i.imgur.com/hpr6CFh.png"
         alt="The cover of Stubborn Attachments"
-      />
+        className="justify-center w-full flex-1"
+      /> */}
       <div className="description">
         <h3>Senior Delivery Subscription</h3>
-        <h5>$20.00</h5>
+        <h5>$25.00</h5>
       </div>
     </div>
-    <form action="/create-checkout-session" method="POST">
+    <form
+      action="http://127.0.0.1:5000/api/create-checkout-session"
+      method="POST"
+      className="flex justify-center w-full"
+    >
       <Button
         variant="shadow"
         color="success"

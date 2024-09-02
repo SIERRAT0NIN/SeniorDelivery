@@ -10,6 +10,7 @@ import Checkout from "../pages/Checkout";
 import UserProfilePage from "../pages/UserProfilePage";
 
 import { SignedIn, SignedOut } from "@clerk/clerk-react";
+import StripeCheckOut from "../components/StripeCheckOut";
 
 const ProtectedRoute = ({ element }) => {
   return (
@@ -34,6 +35,10 @@ function App() {
         <Route
           path="/explore"
           element={<ProtectedRoute element={<Explore />} />}
+        />
+        <Route
+          path="/create-checkout-session"
+          element={<ProtectedRoute element={<StripeCheckOut />} />}
         />
         <Route
           path="/check-out"

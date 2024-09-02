@@ -13,7 +13,9 @@ export default function App() {
   return (
     <Navbar shouldHideOnScroll>
       <NavbarBrand>
-        <p className="font-bold lobster-regular  text-xl">Senior Delivery</p>
+        <p className="font-bold lobster-regular-title   text-xl">
+          Senior Delivery
+        </p>
       </NavbarBrand>
       <NavbarContent
         className="hidden sm:flex gap-4 text-black"

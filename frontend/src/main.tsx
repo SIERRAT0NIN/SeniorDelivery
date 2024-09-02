@@ -22,7 +22,10 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
           <NavBar />
           {/* <ScrollShadow hideScrollBar className=" w-auto h-auto"> */}
-          <App />
+          <div className="mx-auto flex-1 justify-center items-center min-h-screen max-w-screen-lg">
+            <App />
+          </div>
+
           {/* </ScrollShadow> */}
         </ClerkProvider>
       </NextUIProvider>

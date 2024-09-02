@@ -9,11 +9,10 @@ import {
 } from "@nextui-org/react";
 import StripeCheckOut from "../components/StripeCheckOut";
 import StripeEx from "../components/StripeEx";
-
 const Checkout = () => {
   return (
-    <div className="bg-secondary w-screen h-screen justify-center flex">
-      <Card className="w-fit h-fit justify-center ">
+    <div className=" justify-center flex m-10">
+      <Card className="h-fit justify-center flex w-full">
         <CardHeader>
           <h2 className="text-2xl text-center flex-1 font-bold">Checkout</h2>
         </CardHeader>
@@ -21,7 +20,7 @@ const Checkout = () => {
           <StripeEx />
         </CardBody>
         <CardFooter>
-          <ButtonGroup className=" ">
+          <ButtonGroup className="justify-center flex w-full ">
             <Link href="/success-checkout"></Link>
             {/* <StripeCheckOut /> */}
           </ButtonGroup>

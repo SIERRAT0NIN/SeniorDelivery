@@ -1,6 +1,13 @@
 .lobster-regular {
   font-family: "Lobster", sans-serif;
   font-style: normal;
+  font-size: larger;
+  margin-left: 0.5%;
+}
+.lobster-regular-title {
+  font-family: "Lobster", sans-serif;
+  font-style: normal;
+  font-size: 1.5em;
 }
 body {
   font-family: "Lora", serif;
