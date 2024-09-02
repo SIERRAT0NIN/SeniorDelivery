@@ -22,3 +22,20 @@ body {
     #00c78a
   );
 }
+.gradient-card1 {
+  background-image: linear-gradient(
+    to left top,
+    #6bd17e,
+    #00cfa7,
+    #00c9cd,
+    #00bfe8,
+    #00b2f3,
+    #34b4f6,
+    #4cb5f9,
+    #5fb7fc,
+    #3ccaff,
+    #22dcff,
+    #36ecfc,
+    #5ffbf1
+  );
+}

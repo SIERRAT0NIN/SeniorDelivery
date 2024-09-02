@@ -6,6 +6,7 @@ import Dashboard from "../pages/Dashboard";
 import Explore from "../pages/Explore";
 import NotFound from "../pages/NotFound";
 import Signin from "../pages/Sign-in";
+import Checkout from "../pages/Checkout";
 import UserProfilePage from "../pages/UserProfilePage";
 
 import { SignedIn, SignedOut } from "@clerk/clerk-react";
@@ -33,6 +34,10 @@ function App() {
         <Route
           path="/explore"
           element={<ProtectedRoute element={<Explore />} />}
+        />
+        <Route
+          path="/check-out"
+          element={<ProtectedRoute element={<Checkout />} />}
         />
         <Route
           path="/user-profile"
