@@ -50,17 +50,19 @@ const Home = () => {
             Our solution to food deserts affecting our elderly population.
           </h2>
           <div className="flex-1 justify-center">
-            <Button color="primary" onPress={onOpen}>
-              Learn More!
-            </Button>
-            <Modal isOpen={isOpen} onOpenChange={onOpenChange} className="p-10">
-              <ModalContent>
+            <div className="mt-10 mb-5">
+              <Button className="m-10 p-md" color="primary" onPress={onOpen}>
+                Learn More!
+              </Button>
+            </div>
+            <Modal isOpen={isOpen} onOpenChange={onOpenChange} className="p-lg">
+              <ModalContent className=" p-md">
                 {(onClose) => (
                   <>
                     <ModalHeader className="flex flex-col gap-1">
-                      Modal Title
+                      What is a "food desert"?
                     </ModalHeader>
-                    <ModalBody>
+                    <ModalBody className="">
                       <p>
                         Food deserts are areas, often in low-income
                         neighborhoods, where access to affordable and nutritious
@@ -104,7 +106,7 @@ const Home = () => {
             <Intro />
             {/* <Menu /> */}
           </div>
-          <div className="flex justify-center">
+          <div className="flex justify-center ">
             <CarouselHero images={images} />
           </div>
           <Link href="/check-out">

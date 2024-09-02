@@ -42,7 +42,7 @@ def create_checkout_session():
             ],
             mode='subscription',
             success_url=YOUR_DOMAIN + '/success',
-            cancel_url=YOUR_DOMAIN + '/cancel',
+            cancel_url=YOUR_DOMAIN + '/',
         )
     except Exception as e:
         return str(e)

@@ -7,6 +7,7 @@ import Explore from "../pages/Explore";
 import NotFound from "../pages/NotFound";
 import Signin from "../pages/Sign-in";
 import Checkout from "../pages/Checkout";
+import Success from "../pages/Success";
 import UserProfilePage from "../pages/UserProfilePage";
 
 import { SignedIn, SignedOut } from "@clerk/clerk-react";
@@ -47,6 +48,10 @@ function App() {
         <Route
           path="/user-profile"
           element={<ProtectedRoute element={<UserProfilePage />} />}
+        />
+        <Route
+          path="/success"
+          element={<ProtectedRoute element={<Success />} />}
         />
 
         <Route path="/sign-in" element={<Signin />} />

@@ -3,17 +3,17 @@ import React from "react";
 
 const ReusableCard = ({ headerText, imageSrc, footerContent }) => {
   return (
-    <Card>
-      <CardHeader>
+    <Card className="mt-10 p-md justify-evenly w-full gap-x-5 hover:bg-accent hover:text-white hover:shadow-2xl ">
+      <CardHeader className="justify-center">
         <h1>{headerText}</h1>
       </CardHeader>
       <Image
-        height={400}
-        width={400}
+        height={300}
+        width={300}
         src={imageSrc}
         className="flex-shrink-0"
       />
-      <CardFooter className="j">{footerContent}</CardFooter>
+      <CardFooter className="j justify-center">{footerContent}</CardFooter>
     </Card>
   );
 };

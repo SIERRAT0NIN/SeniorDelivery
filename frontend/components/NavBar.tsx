@@ -47,7 +47,7 @@ export default function App() {
         </NavbarItem>
         <NavbarItem>
           {/* <Button as={Link} color="primary" variant="shadow" className=""> */}
-          <ClerkAvi />
+
           {/* </Button> */}
         </NavbarItem>
       </NavbarContent>
