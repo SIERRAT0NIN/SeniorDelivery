@@ -40,29 +40,29 @@ const Home = () => {
 
   return (
     <>
-      <div className="text-center text-3xl font-bold text-black  flex-1">
+      <div className="text-center text-3xl font-bold text-black flex-1 md:p-md">
         <section className="flex-1 justify-center h-screen ">
-          <h1 className="">
+          <h1 className="text-3xl md:text-5xl font-bold">
             Welcome to
             <span className="lobster-regular">Senior Delivery</span>!
           </h1>
-          <h2>
+          <h2 className="text-xl md:text-2xl mt-2">
             Our solution to food deserts affecting our elderly population.
           </h2>
-          <div className="flex-1 justify-center">
+          <div className="flex flex-col items-center mt-6">
             <div className="mt-10 mb-5">
               <Button className="m-10 p-md" color="primary" onPress={onOpen}>
                 Learn More!
               </Button>
             </div>
             <Modal isOpen={isOpen} onOpenChange={onOpenChange} className="p-lg">
-              <ModalContent className=" p-md">
+              <ModalContent className="p-4 md:p-md">
                 {(onClose) => (
                   <>
-                    <ModalHeader className="flex flex-col gap-1">
+                    <ModalHeader className="flex flex-col gap-1 text-lg md:text-2xl">
                       What is a "food desert"?
                     </ModalHeader>
-                    <ModalBody className="">
+                    <ModalBody className="text-sm md:text-base leading-relaxed">
                       <p>
                         Food deserts are areas, often in low-income
                         neighborhoods, where access to affordable and nutritious

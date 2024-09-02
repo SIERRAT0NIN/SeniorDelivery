@@ -10,7 +10,7 @@ import React from "react";
 
 const ReusableCard = ({ headerText, imageSrc, footerContent, title }) => {
   return (
-    <Card className="mt-10 p-md justify-evenly w-full gap-x-5 hover:bg-accent hover:text-white hover:shadow-2xl hover:shadow-accent hover:cursor-pointer m-5">
+    <Card className="mt-10 p-md justify-evenly w-full gap-x-5 hover:bg-accent hover:text-white hover:shadow-2xl hover:shadow-accent hover:cursor-pointer m-5 transform hover:scale-105 transition duration-300 ease-in-out ">
       <CardHeader className="justify-center">
         <div>
           <h1 className="text-2xl font-bold text-center">{headerText}</h1>
@@ -18,10 +18,10 @@ const ReusableCard = ({ headerText, imageSrc, footerContent, title }) => {
         </div>
       </CardHeader>
       <Image
-        height={300}
-        width={300}
+        height={250}
+        width="100%"
         src={imageSrc}
-        className="flex-shrink-0"
+        className="object-cover rounded-lg mb-4"
       />
       <CardFooter className="justify-center flex">
         <div>
