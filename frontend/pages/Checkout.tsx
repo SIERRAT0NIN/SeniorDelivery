@@ -7,6 +7,8 @@ import {
   CardHeader,
   Link,
 } from "@nextui-org/react";
+import StripeCheckOut from "../components/StripeCheckOut";
+import StripeEx from "../components/StripeEx";
 
 const Checkout = () => {
   return (
@@ -15,17 +17,13 @@ const Checkout = () => {
         <CardHeader>
           <h2 className="text-2xl text-center flex-1 font-bold">Checkout</h2>
         </CardHeader>
-        <CardBody></CardBody>
+        <CardBody>
+          <StripeEx />
+        </CardBody>
         <CardFooter>
           <ButtonGroup className=" ">
-            <Link href="/success-checkout">
-              <Button className="text-white" color="success">
-                Checkout
-              </Button>
-            </Link>
-            <Link href="/">
-              <Button color="primary">Cancel</Button>
-            </Link>
+            <Link href="/success-checkout"></Link>
+            {/* <StripeCheckOut /> */}
           </ButtonGroup>
         </CardFooter>
       </Card>

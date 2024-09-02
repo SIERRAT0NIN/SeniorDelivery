@@ -13,6 +13,8 @@
     "@clerk/clerk-react": "^5.5.0",
     "@clerk/nextjs": "^5.3.7",
     "@nextui-org/react": "^2.4.6",
+    "@stripe/react-stripe-js": "^2.8.0",
+    "@stripe/stripe-js": "^4.4.0",
     "antd": "^5.20.3",
     "framer-motion": "^11.3.31",
     "react": "^18.3.1",
