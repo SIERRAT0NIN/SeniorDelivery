@@ -104,16 +104,15 @@ const Home = () => {
           </div>
           <div className="">
             <Intro />
-            {/* <Menu /> */}
           </div>
           <div className="flex justify-center ">
             <CarouselHero images={images} />
           </div>
-          <Link href="/check-out">
-            <Button color="primary" variant="shadow">
+          {/* <Link href="/check-out">
+            <Button color="primary" variant="shadow" className="mt-10">
               Check Out
             </Button>
-          </Link>
+          </Link> */}
         </section>
       </div>
     </>

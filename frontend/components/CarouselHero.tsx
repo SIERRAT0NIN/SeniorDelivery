@@ -1,9 +1,16 @@
-import { Button, Card, CardFooter, CardHeader, Image } from "@nextui-org/react";
+import {
+  Button,
+  Card,
+  CardFooter,
+  CardHeader,
+  Image,
+  Link,
+} from "@nextui-org/react";
 import React from "react";
 
 const ReusableCard = ({ headerText, imageSrc, footerContent }) => {
   return (
-    <Card className="mt-10 p-md justify-evenly w-full gap-x-5 hover:bg-accent hover:text-white hover:shadow-2xl ">
+    <Card className="mt-10 p-md justify-evenly w-full gap-x-5 hover:bg-accent hover:text-white hover:shadow-2xl hover:cursor-pointer m-5">
       <CardHeader className="justify-center">
         <h1>{headerText}</h1>
       </CardHeader>
@@ -13,7 +20,16 @@ const ReusableCard = ({ headerText, imageSrc, footerContent }) => {
         src={imageSrc}
         className="flex-shrink-0"
       />
-      <CardFooter className="j justify-center">{footerContent}</CardFooter>
+      <CardFooter className="j justify-center flex-1">
+        {footerContent} <br />
+        <div>
+          <Link href="/check-out">
+            <Button color="primary" variant="shadow" className="mt-10">
+              Check Out
+            </Button>
+          </Link>
+        </div>
+      </CardFooter>
     </Card>
   );
 };
@@ -26,7 +42,7 @@ const CarouselHero = () => {
   ];
 
   return (
-    <div className="flex w-screen bg-secondary">
+    <div className="flex w-screen">
       {images.map((image, index) => (
         <ReusableCard
           key={index}
