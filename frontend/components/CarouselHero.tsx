@@ -1,31 +1,63 @@
-import React from "react";
-import { Carousel, Image } from "antd";
-const contentStyle = {
-  height: "160px",
-  color: "#fff",
-  lineHeight: "160px",
-  textAlign: "center",
-  background: "#364d79",
+import { Button, Image } from "@nextui-org/react";
+import React, { useState } from "react";
+
+const Carousel = ({ images }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + images.length) % images.length
+    );
+  };
+
+  return (
+    <div className="relative w-full max-w-4xl mx-auto overflow-hidden">
+      <div
+        className="flex transition-transform duration-500 ease-in-out"
+        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+      >
+        {images.map((image, index) => (
+          <div key={index} className="flex-shrink-0 w-full">
+            <Image
+              src={image.src}
+              alt={image.alt}
+              className="w-full h-auto object-cover"
+            />
+          </div>
+        ))}
+      </div>
+      {currentIndex > 0 && (
+        <Button
+          className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full"
+          onClick={prevSlide}
+        >
+          &#9664;
+        </Button>
+      )}
+      {currentIndex < images.length - 1 && (
+        <Button
+          className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full"
+          onClick={nextSlide}
+        >
+          &#9654;
+        </Button>
+      )}
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        {images.map((_, index) => (
+          <span
+            key={index}
+            className={`block w-3 h-3 rounded-full ${
+              index === currentIndex ? "bg-gray-800" : "bg-gray-400"
+            }`}
+          />
+        ))}
+      </div>
+    </div>
+  );
 };
-const images = [
-  "https://www.eatright.org/-/media/images/eatright-landing-pages/foodgroupslp_804x482.jpg?as=0&w=967&rev=d0d1ce321d944bbe82024fff81c938e7&hash=E6474C8EFC5BE5F0DA9C32D4A797D10D",
-  "https://www.eatright.org/-/media/images/eatright-landing-pages/foodgroupslp_804x482.jpg?as=0&w=967&rev=d0d1ce321d944bbe82024fff81c938e7&hash=E6474C8EFC5BE5F0DA9C32D4A797D10D",
-  "https://www.eatright.org/-/media/images/eatright-landing-pages/foodgroupslp_804x482.jpg?as=0&w=967&rev=d0d1ce321d944bbe82024fff81c938e7&hash=E6474C8EFC5BE5F0DA9C32D4A797D10D",
-];
-const CarouselHero = () => (
-  <Carousel effect="scrollx" autoplaySpeed={3000}>
-    <div>
-      <img
-        src="https://www.eatright.org/-/media/images/eatright-landing-pages/foodgroupslp_804x482.jpg?as=0&w=967&rev=d0d1ce321d944bbe82024fff81c938e7&hash=E6474C8EFC5BE5F0DA9C32D4A797D10D"
-        alt=""
-      />
-    </div>
-    <div>
-      <h3>Slide 2</h3>
-    </div>
-    <div>
-      <h3>Slide 3</h3>
-    </div>
-  </Carousel>
-);
-export default CarouselHero;
+
+export default Carousel;

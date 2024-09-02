@@ -8,7 +8,7 @@ import NotFound from "../pages/NotFound";
 import Signin from "../pages/Sign-in";
 import UserProfilePage from "../pages/UserProfilePage";
 
-import { SignedIn, SignIn, SignedOut } from "@clerk/clerk-react";
+import { SignedIn, SignedOut } from "@clerk/clerk-react";
 
 const ProtectedRoute = ({ element }) => {
   return (

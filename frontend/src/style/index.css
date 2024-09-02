@@ -1,28 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-.lobster-regular {
-  font-family: "Lobster", sans-serif;
-  font-style: normal;
-}
-body {
-  font-family: "Lora", serif;
-}
-.gradient-bg {
-  background-image: linear-gradient(
-    to bottom,
-    #ffffff,
-    #fefcfe,
-    #fff9fb,
-    #fff6f6,
-    #fff3ef,
-    #fee2d6,
-    #fbd2bb,
-    #f4c3a0,
-    #eb9f71,
-    #e07a48,
-    #d44f23,
-    #c70000
-  );
-}
