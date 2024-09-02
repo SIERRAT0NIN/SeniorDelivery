@@ -49,8 +49,8 @@ const Home = () => {
           <h2 className="text-xl md:text-2xl mt-2">
             Our solution to food deserts affecting our elderly population.
           </h2>
-          <div className="flex flex-col items-center mt-6">
-            <div className="mt-10 mb-5">
+          <div className="flex flex-col items-center ">
+            <div className="mt-5 mb-5">
               <Button className="m-10 p-md" color="primary" onPress={onOpen}>
                 Learn More!
               </Button>
