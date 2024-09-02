@@ -18,26 +18,24 @@ export default function App() {
       <NavbarContent
         className="hidden sm:flex gap-4 text-black"
         justify="center"
-      >
-        <NavbarItem></NavbarItem>
-      </NavbarContent>
+      ></NavbarContent>
       <NavbarItem isActive>
-        <Link color="foreground" href="#">
+        <Link color="foreground" href="/">
           Menu
         </Link>
       </NavbarItem>
       <NavbarItem>
-        <Link color="foreground" href="#">
+        <Link color="foreground" href="about">
           About
         </Link>
       </NavbarItem>
       <NavbarItem>
-        <Link color="foreground" href="#">
+        <Link color="foreground" href="explore">
           Explore
         </Link>
       </NavbarItem>
       <NavbarItem>
-        <Link color="foreground" href="#">
+        <Link color="foreground" href="/user-profile">
           Profile
         </Link>
       </NavbarItem>
