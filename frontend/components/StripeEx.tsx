@@ -3,14 +3,8 @@ import React, { useState, useEffect } from "react";
 
 const ProductDisplay = () => (
   <section>
-    <div className="gradient-card1 rounded-lg mt-10 text-white justify-center w-full flex">
-      {/* <Image
-        width={200}
-        src="https://i.imgur.com/hpr6CFh.png"
-        alt="The cover of Stubborn Attachments"
-        className="justify-center w-full flex-1"
-      /> */}
-      <div className="description">
+    <div className="gradient-card1 rounded-lg mt-10 text-white justify-center flex mb-10 mx-10">
+      <div className="justify-center flex align-middle w-fit m-10 ">
         <h3>Senior Delivery Subscription</h3>
         <h5>$25.00</h5>
       </div>
@@ -18,7 +12,7 @@ const ProductDisplay = () => (
     <form
       action="http://127.0.0.1:5000/api/create-checkout-session"
       method="POST"
-      className="flex justify-center w-full"
+      className="flex justify-center w-full gap-10 m-10"
     >
       <Button
         variant="shadow"

@@ -8,11 +8,14 @@ import {
 } from "@nextui-org/react";
 import React from "react";
 
-const ReusableCard = ({ headerText, imageSrc, footerContent }) => {
+const ReusableCard = ({ headerText, imageSrc, footerContent, title }) => {
   return (
-    <Card className="mt-10 p-md justify-evenly w-full gap-x-5 hover:bg-accent hover:text-white hover:shadow-2xl hover:cursor-pointer m-5">
+    <Card className="mt-10 p-md justify-evenly w-full gap-x-5 hover:bg-accent hover:text-white hover:shadow-2xl hover:shadow-accent hover:cursor-pointer m-5">
       <CardHeader className="justify-center">
-        <h1>{headerText}</h1>
+        <div>
+          <h1 className="text-2xl font-bold text-center">{headerText}</h1>
+          <h2>{title}</h2>
+        </div>
       </CardHeader>
       <Image
         height={300}
@@ -20,11 +23,11 @@ const ReusableCard = ({ headerText, imageSrc, footerContent }) => {
         src={imageSrc}
         className="flex-shrink-0"
       />
-      <CardFooter className="j justify-center flex-1">
-        {footerContent} <br />
+      <CardFooter className="justify-center flex">
         <div>
-          <Link href="/check-out">
-            <Button color="primary" variant="shadow" className="mt-10">
+          {footerContent}
+          <Link href="/check-out" className="">
+            <Button color="primary" variant="shadow" className="">
               Check Out
             </Button>
           </Link>
@@ -36,9 +39,22 @@ const ReusableCard = ({ headerText, imageSrc, footerContent }) => {
 
 const CarouselHero = () => {
   const images = [
-    "https://images.unsplash.com/photo-1580476262798-bddd9f4b7369?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://images.unsplash.com/photo-1704081312020-23e46aea6537?q=80&w=3027&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://plus.unsplash.com/premium_photo-1664648119278-15e9133714c4?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    {
+      src: "https://images.unsplash.com/photo-1580476262798-bddd9f4b7369?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      headerText: "Pescatarian",
+      title: "A Seafood oriented meal plan",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1704081312020-23e46aea6537?q=80&w=3027&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      headerText: "Red Meat Diet",
+      title:
+        "A meal plan oriented around red meats, such as beef, pork and lamb",
+    },
+    {
+      src: "https://plus.unsplash.com/premium_photo-1664648119278-15e9133714c4?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      headerText: "Vegan",
+      title: "Gourmet vegan dinners, free from any animal produces",
+    },
   ];
 
   return (
@@ -46,13 +62,12 @@ const CarouselHero = () => {
       {images.map((image, index) => (
         <ReusableCard
           key={index}
-          headerText={`Header ${index + 1}`}
-          imageSrc={image}
+          headerText={image.headerText}
+          imageSrc={image.src}
           footerContent={
-            <span className="justify-center flex">
-              Meal Plan {index + 1} <br />
-            </span>
+            <span className="justify-center flex">Meal Plan {index + 1}</span>
           }
+          title={image.title}
         />
       ))}
     </div>
