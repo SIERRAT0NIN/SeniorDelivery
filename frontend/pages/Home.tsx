@@ -4,9 +4,18 @@ import Menu from "../components/Menu";
 import CarouselHero from "../components/CarouselHero";
 
 const images = [
-  { src: "https://via.placeholder.com/800x400?text=Slide+1", alt: "Slide 1" },
-  { src: "https://via.placeholder.com/800x400?text=Slide+2", alt: "Slide 2" },
-  { src: "https://via.placeholder.com/800x400?text=Slide+3", alt: "Slide 3" },
+  {
+    src: "https://images.squarespace-cdn.com/content/v1/58bf61ea3a041163d873b4e8/1587422396891-RMWS0B51RBVJ53YO2HCM/combisteam-queen-bakedsalmonwithvegetables.jpeg",
+    alt: "Slide 1",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?q=80&w=2864&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    alt: "Slide 2",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1516100882582-96c3a05fe590?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    alt: "Slide 3",
+  },
 ];
 
 const Home = () => {

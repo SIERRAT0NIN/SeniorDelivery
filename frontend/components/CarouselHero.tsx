@@ -1,5 +1,6 @@
 import { Button, Image } from "@nextui-org/react";
 import React, { useState } from "react";
+import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 
 const Carousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -21,30 +22,38 @@ const Carousel = ({ images }) => {
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {images.map((image, index) => (
-          <div key={index} className="flex-shrink-0 w-full">
+          <div key={index} className="flex-shrink-0 w-full max-h-96">
             <Image
               src={image.src}
               alt={image.alt}
-              className="w-full h-auto object-cover"
+              width={400}
+              height={400}
+              className="w-full h-1/2 object-cover"
             />
           </div>
         ))}
       </div>
       {currentIndex > 0 && (
-        <Button
-          className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full"
+        <div
+          className="absolute top-1/2 left-4 transform -translate-y-1/2 cursor-pointer"
           onClick={prevSlide}
         >
-          &#9664;
-        </Button>
+          <AiOutlineLeft
+            size={30}
+            className="text-gray-800 hover:text-gray-600"
+          />
+        </div>
       )}
       {currentIndex < images.length - 1 && (
-        <Button
-          className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full"
+        <div
+          className="absolute top-1/2 right-4 transform -translate-y-1/2 cursor-pointer"
           onClick={nextSlide}
         >
-          &#9654;
-        </Button>
+          <AiOutlineRight
+            size={30}
+            className="text-gray-800 hover:text-gray-600"
+          />
+        </div>
       )}
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {images.map((_, index) => (
